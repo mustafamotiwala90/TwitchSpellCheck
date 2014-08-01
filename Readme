@@ -1,0 +1,32 @@
+README : 
+
+SpellChecker :
+
+Archictecture : 
+
+-Given a list of words , create a Trie and insert each word into the Trie.
+- Here the trie is SpellCheckTrie
+- It uses a custom node data structure called TrieNode
+- intially a Trie is created via createTree.
+- then each element in the string is inserted
+- After insertion a word is checked if to be present in the trie. This is done by traversing each node.
+
+Final Step is integrated into the main program :
+
+- Method is called generateSpellingMistake() and it checks against the entire trie.
+
+
+Time Complexity : 
+
+insertion is O(1) for each node.
+so insertion complexity will be the same as the length of a string in the dictionary.
+
+
+Lets say the length of a string is x letters
+then the time complexity will be O(x) since we are traversing only the string and not the entire trie itself,if at any time we do not find a matching node it returns false;
+So its safe to say that a lookup of O(1) is achieved here
+
+
+Space Complexity :
+- We create a node for each letter in the trie. We reuse the same node to prevent space issue by not creating a new node if the prefix letter is already present.
+
